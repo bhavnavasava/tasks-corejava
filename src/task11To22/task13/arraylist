@@ -1,0 +1,22 @@
+
+task 13) why ArrayList ? how it works internally ?  what if it overflow or it is possible?
+	what is the max size of ArrayList?
+
+ Arraylist?
+
+-->The most obvious reason is that an ArrayList in Java is resizable. Unlike standard arrays, an ArrayList grows upon the addition of new elements.
+	 An array is fixed in size, and once it is full, you cannot add more items to it.
+
+-->what is the max size of ArrayList?
+	When you initialize an ArrayList, an array of size 10 (default capacity) is created and an element added to the ArrayList is actually added to this array. 
+	10 is the default size and it can be passed as a parameter while initializing the ArrayList.
+
+-->how it works internally ? what if it overflow or it is possible?
+	When adding a new element, if the array is full, then a new array of 50% more the initial size is created and the last array is copied to this new array 
+	so that now there are empty spaces for the new element to be added.
+
+	Since the underlying data-structure used is an array, it is fairly easy to add a new element to the ArrayList as it is added to the end of the list. 
+	When an element is to be added anywhere else, say the beginning, then all the elements shall have to move one position to the right to
+	create an empty space at the beginning for the new element to be added. This process is time-consuming (linear-time).
+  	But the Advantage of ArrayList is that retrieving an element at any position is very fast (constant-time), 
+  	as underlying it is simply using an array of objects.
